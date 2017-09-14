@@ -5,6 +5,7 @@
   <title>Technomart</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 <body>
 	<header class="main-header">
@@ -33,7 +34,10 @@
 					<h2 class="visually-hidden">Вход и регистрация</h2>
 					<a class="customer__enter" href="#">Войти</a>
 					<a class="customer__registration" href="#">Регистрация</a>
-					<!-- <a class="customer__authorize" href="#">Равшан Джамшутович</a>
+					<!-- <div class="user-block--wrapper">
+						<a class="customer__authorize" href="#">Равшан Джамшутович
+						<a class="customer__exit" href="#"></a>
+					</div>	
 					<ul class="customer-list">
 						<li><a href="#">Мои заказы</a></li>
 						<li><a href="#">Личный кабинет</a></li>
@@ -53,5 +57,59 @@
 			</nav>
 		</div>	
 	</header>
+	<main class="main-content">
+		<div class="main-content-wrapper">
+			<article class="catalog">
+				<h2 class="visually-hidden">Каталог товаров</h2>
+				<div class="catalog--left-column">
+					<section class="catalog__item catalog-materials">
+						<h2 class="catalog__item__title">Материалы</h2>
+						<a href="#" class="catalog__item__btn">На любой вкус</a>
+					</section>
+					<section class="catalog__item catalog-instruments">
+						<h2 class="catalog__item__title">Инструмент</h2>
+						<a href="#" class="catalog__item__btn">На все случаи</a>
+					</section>
+					<section class="slider">
+						<h2 class="visually-hidden">Слайдер</h2>
+						<input type="radio" name="toogle" value="" id="btn1" checked>
+						<input type="radio" name="toogle" value="" id="btn2">
+						<div class="slider-controls">
+							<label for="btn1"></label>
+							<label for="btn2"></label>
+						</div>
+						<span class="slide-left"></span>
+						<span class="slide-right"></span>	
+						<div class="slides">
+							<div class="slide">
+								<h2 class="slide-title">Перфораторы</h2>
+								<p class="slide-text">Настоящие мужские игрушки</p>
+								<a href="#" class="slide__btn">Открыть каталог</a>
+							</div>
+							<div class="slide">
+								<h2 class="slide-title">Дрели</h2>
+								<p class="slide-text">Соседям на радость</p>
+								<a href="#" class="slide__btn">Открыть каталог</a>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="catalog--right-column">
+					<section class="catalog__item catalog-cars">
+						<h2 class="catalog__item__title">Техника</h2>
+						<a href="#" class="catalog__item__btn">Для стройки</a>
+					</section>
+					<section class="catalog__item catalog-sale">
+						<h2 class="catalog__item__title">Скидки 50%</h2>
+						<a href="#" class="catalog__item__btn">На 350 товаров</a>
+					</section>
+					<section class="catalog__item catalog-delivery">
+						<h2 class="catalog__item__title">Доставка</h2>
+						<a href="#" class="catalog__item__btn">Бесплатно</a>
+					</section>
+				</div>	
+			</article>
+		</div>
+	</main>
 </body>
 </html>

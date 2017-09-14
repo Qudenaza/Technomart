@@ -1,5 +1,6 @@
 html, body {
 	padding: 0;
+	width: 100%;
 	font-family: "Cuprum", "Tahoma", serif;
 	font-size: 17px;
 	font-weight: 400;
@@ -21,7 +22,6 @@ html, body {
 
 
 .main-header {
-	width: 100%;
 	height: 42px;
 	background: #293449;
 }
@@ -62,6 +62,7 @@ html, body {
 	background: #ba2732;
 	border-color: #8e1e26;
 }
+
 
 .user-block__search-field {
 	width: 270px;
@@ -221,7 +222,7 @@ html, body {
 
 .user-block__customer a {
 	display: block;
-	padding: 10px 27px 10px 0;
+	padding: 10px 32px 10px 0;
 	font-size: 21px;
 	font-weight: 400;
 	color: #000000;
@@ -258,45 +259,44 @@ html, body {
 	background: #ffffff;
 }
 
-.user-block__customer .customer__authorize {
-	position: relative;
+.user-block--wrapper {
 	width: 100%;
+	display: flex;
+}
+
+.user-block__customer .customer__authorize {
 	padding-left: 46px;
 	padding-right: 36px;
 	background: url("../img/user-icon.svg") no-repeat 5% 50%,
-							url("../img/enter-icon.svg") no-repeat 94% 50%,
 							#ffffff;
 }
 
-// .user-block__customer .customer__authorize::after {
-// 	content: "";
-// 	position: absolute;
-// 	right: 13px;
-//   top: 31%;
-// 	width: 17px;
-// 	height: 17px;
-// 	background: url("../img/enter-icon.svg") no-repeat;
-// }
+.customer__exit {
+	display: block;
+	width: 17px;
+	background: url("../img/enter-icon.svg") no-repeat 0% 50%,
+							#ffffff;
+}
 
-// .user-block__customer .customer__authorize:hover::after {
-// 	background: url("../img/enter-icon-hover.svg") no-repeat;
-// }
+.customer__exit:hover {
+	background: url("../img/enter-icon-hover.svg") no-repeat 0% 50%,
+							#ffffff;
+}
 
-// .user-block__customer .customer__authorize:active::after {
-// 	background: url("../img/enter-icon.svg") no-repeat;
-// }
+.customer__exit:active {
+	background: url("../img/enter-icon.svg") no-repeat 0% 50%,
+							#ffffff;
+}
 
 .user-block__customer .customer__authorize:hover {
 	color: #000000;
 	background: url("../img/user-icon-hover.svg") no-repeat 5% 50%,
-							url("../img/enter-icon-hover.svg") no-repeat 94% 50%,
 							#ffffff;
 }
 
 .user-block__customer .customer__authorize:active {
 	color: rgba(0, 0, 0, 0.3);
 	background: url("../img/user-icon.svg") no-repeat 5% 50%,
-							url("../img/enter-icon.svg") no-repeat 94% 50%,
 							#ffffff;
 }
 
@@ -362,4 +362,260 @@ html, body {
 
 .main-navigation__list a:active {
 	color: rgba(255, 255, 255, 0.5);
+}
+
+
+.main-content {
+	outline: 1px solid red;
+	width: 100%;
+	margin-top: 278px;
+	background: #ffffff;
+}
+
+.main-content-wrapper {
+	width: 940px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.catalog {
+	display: flex;
+	height: 409px;
+}
+
+.catalog--left-column {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 620px;
+}
+
+.catalog--right-column {
+	display: flex;
+	flex-wrap: wrap;
+	width: 300px;
+	margin-left: 20px;
+}
+
+.catalog__item {
+	position: relative;
+	width: 300px;
+	height: 123px;
+	margin-bottom: 20px;
+}
+
+.catalog-materials {
+	background: url("../img/paint.png") no-repeat 83% 50%,
+							#ffbf47;
+}
+
+.catalog-instruments {
+	background: url("../img/instrument.png") no-repeat 88% 50%,
+							#3bbce3;
+}
+
+.catalog-cars	{
+	background: url("../img/cars.png") no-repeat 86% 50%,
+							#dc91d8;
+}
+
+.catalog-sale	{
+	background: url("../img/sale.png") no-repeat 81% 50%,
+							#8ed78f;
+}
+
+
+.catalog-delivery	{
+	background: url("../img/delivery.png") no-repeat 86% 50%,
+							#ffc047;
+}
+
+.catalog-materials::after {
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 59px;
+	top: 0;
+	right: 0;
+	background: url("../img/new.png") no-repeat;
+}
+
+.catalog__item__title {
+	display: block;
+	margin: 20px 0 0 22px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #ffffff;
+}
+
+.catalog__item__btn {
+	display: block;
+	width: 135px;
+	margin: 13px 0 0 22px;
+	padding: 10px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none; 
+}
+
+.catalog__item__btn:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.catalog__item__btn:active{
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.slider {
+	position: relative;
+	width: 620px;
+	height: 266px;
+	color: #ffffff;
+}
+
+.slider input {
+	display: none;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	-webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.slide-title {
+	margin: 0;
+	padding: 23px 0 0 25px;
+	text-transform: uppercase;
+	font-size: 36px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.slide-text {
+	font-family: "PT Sans", "Tahoma", serif;
+	margin: 8px 0 0 25px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+.slide:first-child {
+	background: url("../img/slider-first-image.jpg") no-repeat;
+}
+
+.slide:last-child {
+	background: url("../img/slider-second-image.jpg") no-repeat;
+}
+
+.slide__btn {
+	display: block;
+	width: 196px;
+	padding: 11px 48px;
+	margin: 120px 0 0 26px;
+	border-radius: 3px;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ee3643;
+}
+
+.slide__btn:hover {
+	background: #ca2c37;
+}
+
+.slide__btn:active {
+	background: #ba2732;
+}
+
+.slider-controls {
+	position: absolute;
+  z-index: 100;
+  bottom: 27px;
+  left: 67%;
+  margin-left: -122px;
+  text-align: center;
+}
+
+.slider-controls label {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin: 0 3px;
+	background: #ffffff;
+	border: 3px solid #ffffff;
+	vertical-align: top;
+	border-radius: 50%;
+	cursor: pointer;
+	 -webkit-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+ #btn1:checked ~ .slider-controls label[for="btn1"]  {
+ 	background: #ee3643;
+}
+
+ #btn2:checked ~ .slider-controls label[for="btn2"]  {
+ 	background: #ee3643;
+}
+
+#btn1:checked ~ .slides .slide:first-child{
+	display: block;
+}
+
+
+#btn2:checked ~ .slides .slide:last-child {
+	display: block;
+}
+
+
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.slide-left {
+	position: absolute;
+	z-index: 100;
+	top: 43%;
+	left: 25px;
+	width: 22px;
+	height: 40px;
+	background: url("../img/icon-left.png") no-repeat;
+}
+
+.slide-right {
+	position: absolute;
+	z-index: 100;
+	right: 20px;
+	top: 42%;
+	width: 22px;
+	height: 40px;
+	background: url("../img/icon-right.png") no-repeat;
 }
