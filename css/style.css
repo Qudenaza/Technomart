@@ -730,6 +730,10 @@ html, body {
 	text-align: center;
 }
 
+_:-ms-fullscreen, :root .ie {
+	margin-left: -20px;
+}
+
 .drills__item:hover,
 .manufacturers__item:hover {
 	-webkit-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.75);
@@ -1023,6 +1027,16 @@ img[alt="Хитачи"] {
 	color: #293449;
 }
 
+.service__active:hover {
+	background: #ffffff;
+	color: #293449;
+}
+
+.service__active:focus {
+	background: #ffffff;
+	color: #293449;
+}
+
 .service__delivery {
 	width: 100%;
 	background: url("../img/delivery-list.png") no-repeat right 23px;
@@ -1168,6 +1182,8 @@ img[alt="Хитачи"] {
 }
 
 .features__map	{
+	position: relative;
+	display: block;
 	text-align: right;
 	margin-top: 30px;
 }
@@ -1361,4 +1377,157 @@ img[alt="Хитачи"] {
 .fb-btn:hover,
 .insta-btn:hover {
 	background-color: #ee3643;
+}
+
+.modal-feedback {
+	position: fixed;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 200;
+  display: none;
+  background: #ffffff;
+	margin: 0 auto;
+	width: 620px;
+	padding: 45px 80px 37px 80px;
+	box-sizing: border-box;
+	border-top: 7px solid #ff5357;
+	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.modal-feedback__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 21px;
+	height: 21px;
+	z-index: 100;
+	background: url("../img/modal-close.png") no-repeat, transparent;
+	font-size: 0;
+	border: none;
+	cursor: pointer;
+}
+
+.modal-feedback__form label {
+	width: 220px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.modal-feedback__form input {
+	width: 220px;
+	margin-top: 13px;
+	padding: 9px 13px;
+	box-sizing: border-box;
+	border: 2px solid #dee3e4;
+	border-radius: 3px;
+	font-family: "PT Sans", "Tahoma", serif;
+}
+
+.modal-feedback__form__data {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 19px;
+}
+
+.modal-feedback__form__text {
+	display: flex;
+}
+
+.modal-feedback__form__text label {
+	width: 100%;
+}
+
+.modal-feedback__form__text textarea {
+	height: 110px;
+	width: 100%;
+	margin-top: 13px;
+	padding: 13px 9px;
+	box-sizing: border-box;
+	border: 2px solid #dee3e4;
+	border-radius: 3px;
+	font-family: "PT Sans", "Tahoma", serif;
+}
+
+.modal-feedback__form__btn {
+	display: block;
+	width: 100%;
+	height: 39px;
+	margin: 27px 24px 0 0;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background: #ee3643;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-feedback__form__btn:hover {
+	background: #ca2c37;
+}
+
+.modal-feedback__form__btn:active {
+	background: #ba2732;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+  }
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.modal-feedback__form__text input::-webkit-input-placeholder {
+  color: #a9a9a9;
+  font-size: 13px;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #a9a9a9;
+  font-size: 13px;
+}
+
+.modal-feedback__form__text input::-moz-placeholder {
+  color: #a9a9a9;
+  font-size: 13px;
+}
+
+textarea::-moz-placeholder {
+  color: #a9a9a9;
+  font-size: 13px;
+}
+
+.modal-map {
+	display: none;
+	position: absolute;
+	left: -125%;
+	top: -141px;
+	bottom: 200px;
+	margin: 0 auto;
+	z-index: 2;
+	width: 940px;
+	height: 446px;
+	box-shadow: 0 0 8px 16px rgba(0, 0, 0, 0.5);
+	background: url("../img/map-big.jpg") no-repeat;
+}
+
+.modal-show {
+	display: block;
 }

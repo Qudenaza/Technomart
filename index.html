@@ -22,8 +22,7 @@
 					<li><a href="#" class="user-block__item basket-item">Корзина: 0</a></li>
 					<li><a href="#" class="user-block__item order-item">Оформить заказ</a></li>
 				</ul>
-				<p class="user-block__desc">Интернет-магазин
-				строительных материалов
+				<p class="user-block__desc">Интернет-магазин строительных материалов
 				<br>и инструментов для ремонта</p>
 				<section class="user-block__adress">
 					<h2 class="visually-hidden">Адрес и номер телефона</h2>
@@ -117,7 +116,7 @@
 				</div>
 				<section class="drills">
 					<h2 class="visually-hidden">Дрели и перфораторы</h2>
-					<div class="drills__item">
+					<div class="drills__item ie">
 						<div class="drills_flag"></div>
 						<div class="drills__actions">
 							<a href="#" class="buy">Купить</a>
@@ -179,7 +178,7 @@
 				</div>
 				<section class="manufacturers__items">
 					<h2 class="visually-hidden">Список производителей</h2>
-					<a href="#" class="manufacturers__item">
+					<a href="#" class="manufacturers__item ie">
 						<img src="img/bosch.png" alt="Бош" width="126" height="37">
 					</a>
 					<a href="#" class="manufacturers__item">
@@ -249,10 +248,13 @@
 				<h2 class="features__title">Контакты</h2>
 				<p class="features__desc">Вы можете забрать товар сами, заехав в наш офис:
 				</p>
-				<div class="features__map">
+				<a href="#" class="features__map">
 					<img src="img/map.jpg" alt="Карта" width="300" height="158">
-				</div>
-				<a href="#" class="features__btn">Заблудились? Напишите нам!</a>
+					<div class="modal-map" id="map">
+						<button type="button" class="modal-feedback__close map-close"></button>
+					</div>
+				</a>
+				<a href="#" class="features__btn btn_up">Заблудились? Напишите нам!</a>
 			</div>
 		</section>
 	</main>
@@ -302,5 +304,27 @@
 			</div>
 		</div>
 	</footer>
+	<section class="modal-feedback">
+		<h2 class="visually-hidden">Пишите нам</h2>
+		<button type="button" class="modal-feedback__close"></button>
+		<form action="#" class="modal-feedback__form">
+			<div class="modal-feedback__form__data">
+				<label for="user-name">Ваше имя:
+					<input type="text" name="name" id="username" placeholder="Представьтесь, пожалуйста">
+				</label>
+				<label for="user-mail">Ваш email:
+					<input type="text" name="mail" id="user-mail" placeholder="Для отправки ответа">
+				</label>	
+			</div>
+			<div class="modal-feedback__form__text">
+				<label for="user-text">Текст письма:
+					<textarea name="usertext" id="user-text" placeholder="В свободной форме"></textarea>
+				</label>
+			</div>
+			<button type="submit" class="modal-feedback__form__btn">Отправить</button>
+		</form>
+	</section>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 </html>
