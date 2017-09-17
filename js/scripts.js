@@ -33,7 +33,6 @@ window.addEventListener("keydown", function(event){
 	}
 });
 
-
 var map;
 
 function initMap() {
